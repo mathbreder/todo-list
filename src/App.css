@@ -1,0 +1,111 @@
+.App {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 45);
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  max-width: 85%;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.new-todo {
+  width: 100%;
+  display: flex;
+}
+
+.new-todo input {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 45);
+  border-bottom-right-radius: 3px;
+  padding: 0.3rem;
+  padding-bottom: 0.1rem;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  outline: none;
+  flex: 1;
+}
+
+.new-todo button {
+  background-color: rgb(0, 0, 45);
+  color: white;
+  border: none;
+  padding: 0.3rem 0.8rem;
+  font-size: 1.5rem;
+  line-height: 1em;
+  outline: none;
+  cursor: pointer;
+}
+
+.list {
+  width: 100%;
+  margin-top: 1rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.5rem;
+  background-color: rgb(235, 235, 235);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.list li.done {
+  background-color: rgb(180, 255, 180);
+}
+
+.list li.cancelled {
+  background-color: rgb(255, 180, 180);
+}
+
+.list li.cancelled .item-text {
+  text-decoration: line-through;
+}
+
+.list li .item-control {
+  display: none;
+}
+
+.list li:hover .item-control {
+  display: flex;
+}
+
+.list li .item-control button {
+  margin-left: 1.5rem;
+  padding: 0.3rem .5rem;
+  cursor: pointer;
+  line-height: 1.5rem;
+}
+
+.list li .check, .list li .restore {
+  background-color: rgb(80, 187, 80);
+}
+
+.list li .cancel, .list li .uncheck, .list li .delete {
+  background-color: rgb(187, 80, 80);
+}
