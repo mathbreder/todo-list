@@ -1,0 +1,36 @@
+.checkbox-wrapper input[type="checkbox"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 2em;
+  height: 2em;
+  border-radius: 5px;
+  margin-right: 0.8em;
+  border: 1px solid #EA5959;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.1s linear;
+}
+.checkbox-wrapper input[type="checkbox"]:hover {
+  border: 2px solid #EA5959;
+}
+.checkbox-wrapper input[type="checkbox"]:checked {
+  background: #EA5959;
+}
+.checkbox-wrapper input[type="checkbox"]:checked::after {
+  content: "\2713";
+  color: #fff;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-wrapper label {
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  color: #5A5A5A;
+  cursor: pointer;
+}
