@@ -42,10 +42,11 @@ const App = () => {
     }
 
     if (newTodo) {
+      const id = todoList.sort((a, b) => b.id - a.id)[0]?.id ?? 0;
       const newTodoList = [
         ...todoList,
         {
-          id: todoList.sort((a, b) => b.id - a.id)[0]?.id + 1 ?? 1,
+          id: id + 1,
           text: newTodo,
           category: selectedCategory !== 0 ? selectedCategory : undefined,
           created: Date.now()
