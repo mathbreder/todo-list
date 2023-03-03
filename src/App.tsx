@@ -187,10 +187,11 @@ const App = () => {
             onChange={(e) => setNewCategory(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === 'Enter') {
+                const id = categories.sort((a, b) => b.id - a.id)[0]?.id ?? 0;
                 const newCategories = [
                   ...categories,
                   {
-                    id: categories.sort((a, b) => b.id - a.id)[0]?.id + 1 ?? 1,
+                    id: id + 1,
                     name: newCategory
                   }
                 ];
